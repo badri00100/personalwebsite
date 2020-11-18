@@ -1,0 +1,519 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    font-family: 'ubuntu',sans-serif;
+    transition: all 0.3 ease;
+    z-index: 999;
+}
+.navbar .menu{
+    transition: all 0.3s ease-in;
+}
+.menu-btn img{
+    width: 40px;
+    padding-top: 3px;
+}
+.menu-btn{
+    display: none;
+}
+.navbar .logo a{
+    font-size: 35px;
+    font-weight: bolder;
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    list-style-type: none;
+}
+.navbar .logo a span{
+    color: rgb(238, 255, 1);
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 10px 50px;
+    margin: auto;
+}
+.navbar .menu li{
+    list-style-type: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: bold;
+    transition: color 0.8s ease;
+}
+.sticky{
+   background-color: skyblue;
+}
+.navbar .menu li a:hover{
+     color: black;
+ }
+ 
+ .logo{
+     margin-left: -20px;
+ }
+
+ /* media query of navbar */
+ 
+ @media(max-width:730px){
+     /* .navbar{
+         background-color: skyblue;
+     } */
+      .navbar .menu{
+          position: fixed;
+          height: 40vh;
+          width: 100%;
+          left: 0;
+          top: -100%;
+          background-color: black;
+          text-align: center;
+      }
+      .navbar .active{
+          top: 0%;
+      }
+       .menu-btn{
+           display: block;
+           z-index: 999;
+           margin-right: -20px;
+         }
+      .navbar .menu li{
+          display: block;
+         }
+       .navbar .menu li a{
+           display: inline-block;
+           margin-top: 25px;
+           font-size: 25px;
+       }
+ }
+/* ------home section start-- */
+.home{
+    display: flex;
+    background: url(photo/back1.jpg) no-repeat center;
+    height: 100vh;
+    background-size: cover;
+    color: yellow;
+    /* max-height: 500px; */
+    font-family: 'ubuntu',sans-serif;
+    /* font-family:cursive; */
+    border: 2px solid black;
+    background-attachment: fixed;
+}
+.home .max-width {
+    margin: auto 0 auto 100px;
+}
+.home .home-content .text-1{
+    font-size: 30px;
+    font-weight: bolder;
+}
+.home .home-content .text-2{
+    font-size: 55px;
+    margin-top: 7px;
+    font-weight: bolder;
+}
+.home .home-content .text-3{
+    font-size: 30px;
+    margin-top: 7px;
+    font-weight: bolder;
+}
+ .home .home-content .text-3 span{
+     color: rgb(8, 8, 8);
+}
+.hire{
+    margin-top: 30px;
+}
+.hire a{
+    font-size: 30px;
+    text-decoration: none;
+    background-color: black;
+    border: 2px solid red;
+    padding: 5px;
+    border-radius: 3px;
+    color: white;
+    margin-left: 80px;
+    transition: all 0.3s ease-in-out;
+}
+.hire a:hover{
+    background: none;
+    color: black;
+}
+.logo a{
+    cursor: default;
+}
+/* media query of home containt */
+@media(max-width:750px){
+    .home .max-width {
+    margin: auto 0 auto 5px;
+}
+
+}
+@media(max-width:450px){    
+    .home .max-width {
+    margin: auto 0 auto -30px;
+}
+    .home .home-content .text-1{
+    font-size: 25px;
+    font-weight: bold;
+}
+.home .home-content .text-2{
+    font-size:40px;
+    margin-top: 6px;
+    font-weight: bold;
+}
+.home .home-content .text-3{
+    font-size: 22px;
+    margin-top: 6px;
+    font-weight: bold;
+}
+.hire a{
+    margin-left: 40px;
+}
+}
+
+
+/* about */
+
+#about{
+text-align: center;
+font-family: italic;
+background-color: blueviolet;
+background-size: cover;
+padding-top: 60px;
+padding-bottom: 30px;
+}
+.head h1{
+    text-decoration: underline;
+    font-size: 70px;
+    text-transform: uppercase;
+}
+.head h3{
+    font-size: 30px;
+    text-transform: capitalize;
+    margin-top: 17px;
+}
+.inner{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-around;
+     margin-top: 40px;
+}
+.left{
+    width: 700px;
+    border-right: 2px solid black;
+    padding-right: 40px;
+}
+.left img{
+    width: 100%;
+}
+.right{
+    width: 45%;
+    font-family: cursive;
+}
+.right h2{
+    font-size: 30px;
+    margin-top: 30px;
+}
+.right p{
+    font-size: 25px;
+    margin-top: 15px;
+}
+.right h2 span{
+    color: yellow;
+}
+/* media query of about section */
+
+
+@media(max-width:1330px){
+    .left{
+        width: 500px;
+    }
+    .right h2{
+        margin-top: 10px;
+    }
+}
+@media(max-width:908px){
+    .inner{
+        margin-top: 10px;
+    }
+    .left{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-right: 0px;
+        border: none;
+    }
+    .right{
+        width: 96%;
+    }
+    .right p{
+        font-size: 20px;
+    }
+}
+
+.service{
+    text-align: center;
+    /* background-color: rgb(0, 0, 0); */
+    background-image: url(photo/services2.jpg);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    padding-top: 50px ;
+    padding-bottom: 50px ;
+    background-attachment: fixed;
+}
+
+
+.heading h1{
+    font-size: 40px;
+    text-transform: uppercase;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    width: 50%;
+}
+.heading h3{
+    font-size: 20px;
+    width: 150px;
+    position: relative;
+    top: -14px;
+    left: 20%;
+    z-index: 1;
+    background-color: rgb(37, 35, 35);
+    border-radius: 8px;
+}
+.allservice{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.allservice div{
+    width: 300px;
+    height: 200px;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(29, 27, 27);
+    transition: all 0.5 ease-in;
+}
+
+.allservice div h3{
+    padding: 17px;
+    font-size: 25px;
+    color: red;
+    transition: all 0.8s ease;
+}
+.allservice div:hover{
+    background-color: red;
+}
+.allservice div:hover h3{
+    color: white;
+}
+.allservice div:hover p{
+    color: white;
+}
+.allservice div p{
+    margin-top: 20px;
+    padding: 0 8px;
+    font-size: 20px;
+    color: red;
+    transition: all 2.5s ease;
+}
+@media(max-width:890px){
+    .allservice{
+        margin-top: 20px;
+    }
+    .allservice div{
+        margin-top: 20px;
+    }
+}
+/* team styling */
+
+.team{
+    text-align: center;
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.header h1{
+    font-size: 40px;
+    margin-bottom: 8px;
+    width: 250px;
+    padding-bottom: 15px;
+    margin: auto;
+    border-bottom: 5px solid black;
+}
+.header h3{
+    font-size: 25px;
+    background-color: white;
+    margin-bottom: 5px;
+    width: 160px;
+    position: relative;
+    top: -19px;
+    margin: auto;
+}
+.card{
+    border: 2px solid black;
+    width: 340px;
+    height: 450px;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    padding: 20px 75px;
+    margin: 0 auto;
+    /* margin-left: 2.5%; */
+    transition: all 0.3 ease;
+}
+.innerteam .card:hover{
+    background-color: rgb(193, 13, 238);
+}
+.innerteam .card:hover .img img{
+    border: 5px solid rgb(0, 0, 0) ;
+}
+
+.card .img img{
+    /* width: 100px; */
+    border: 5px solid red;
+    border-radius: 50%;
+    transition: all 0.3 ease;
+}
+.container h2{
+    margin-top: 15px;
+    margin-bottom: 25px;
+    font-family: italic;
+    font-size: 24px;
+}
+.container li{
+    text-align: left;
+}
+@media(max-width:380px){
+    .card{
+        width: 300px;
+    }
+    .navbar .menu{
+        height: 50vh;
+    }
+}
+                                                                          /* team dot effect */
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid crimson!important;
+    transition: all 0.3 ease;
+}
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+    background-color: crimson!important;
+}
+
+/* contact styling */
+.contact{
+    text-align: center;
+    background-color: blue;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.in{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.ulta{
+    border: 1px solid black;
+    margin-top: 20px;
+    width: 400px;
+    background-color: white;
+}
+.ulta h2{
+    font-size: 30px;
+}
+.ulta form input{
+    width: 300px;
+    text-align: center;
+    margin-top: 20px;
+    padding: 7px 0;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+.ulta form textarea{
+    width: 300px;
+    margin-top: 20px;
+    text-align: center;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+.ulta form button{
+    background-color: black;
+    color: white;
+    border: 2px solid red;
+    padding: 12px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.sidha{
+    width: 400px;
+    border: 1px solid black;
+    background-color: white;
+    margin-top: 20px;
+}
+.sidha h2{
+   width: 100%;
+}
+.full{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.logog{
+    margin-top: 15%;
+    cursor: pointer;
+}
+.logog a img{
+    width: 50px;
+}
+@media(max-width:420px){
+    .ulta{
+        width: 310px;
+        border-radius: 5px;
+    }
+    .sidha{
+        width: 310px;
+        border-radius: 5px;
+    }
+}
+/* footer section  */
+.footer{
+    background-color: rgb(8, 8, 8);
+    color: white;
+    text-align: center;
+    font-size: 15px;
+}
+.footer span{
+    color: red;
+}
